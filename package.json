@@ -1,0 +1,50 @@
+{
+  "name": "redmine-data-loader",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "build": "npm run tsc --project tsconfig.compile.json",
+    "build:w": "tsc --project tsconfig.compile.json -w",
+    "start": "tsnd --inspect --ignore-watch node_modules --respawn --transpile-only -r tsconfig-paths/register src/index.ts",
+    "start:prod": "cross-env NODE_ENV=production node dist/index.js"
+  },
+  "dependencies": {
+    "@tsed/ajv": "^6.95.9",
+    "@tsed/common": "^6.95.9",
+    "@tsed/core": "^6.95.9",
+    "@tsed/di": "^6.95.9",
+    "@tsed/exceptions": "^6.95.9",
+    "@tsed/json-mapper": "^6.95.9",
+    "@tsed/platform-express": "^6.95.9",
+    "@tsed/schema": "^6.95.9",
+    "ajv": "^8.8.2",
+    "axios": "^0.24.0",
+    "body-parser": "^1.19.1",
+    "compression": "^1.7.4",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "cross-env": "^7.0.3",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.2",
+    "method-override": "^3.0.0"
+  },
+  "tsed": {
+    "packageManager": "npm",
+    "convention": "default",
+    "architecture": "default"
+  },
+  "devDependencies": {
+    "@types/compression": "^1.7.2",
+    "@types/cookie-parser": "^1.4.2",
+    "@types/cors": "^2.8.12",
+    "@types/express": "^4.17.13",
+    "@types/method-override": "^0.0.32",
+    "@types/multer": "^1.4.7",
+    "@types/node": "^17.0.4",
+    "ts-node": "^10.4.0",
+    "ts-node-dev": "^1.1.8",
+    "tsconfig-paths": "^3.12.0",
+    "tslib": "^2.3.1",
+    "typescript": "^4.5.4"
+  }
+}
